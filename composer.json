@@ -27,10 +27,7 @@
   "autoload": {
     "psr-4": {
       "Adisa\\PerfectMoney\\": "src/"
-    },
-    "files": [
-      "src/helpers.php"
-    ]
+    }
   },
   "autoload-dev": {
     "psr-4": {
