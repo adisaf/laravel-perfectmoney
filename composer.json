@@ -1,6 +1,6 @@
 {
   "name": "adisaf/laravel-perfectmoney",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "PHP PerfectMoney integration for Laravel",
   "keywords": [
     "laravel",
@@ -27,7 +27,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Adisa\\PerfectMoney\\": "src/"
+      "Adisaf\\PerfectMoney\\": "src/"
     }
   },
   "autoload-dev": {
@@ -39,7 +39,7 @@
   "prefer-stable": true,
   "extra": {
     "branch-alias": {
-      "dev-master": "1.0-dev"
+      "dev-master": "1.0.1-dev"
     },
     "laravel": {
       "providers": [

@@ -21,8 +21,6 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         $viewPath = __DIR__ . '/../src/views';
         $this->loadViewsFrom($viewPath, 'laravelperfectmoney');
         $this->publishes([$viewPath => $this->getResourcesPath()], 'views');
-
-
     }
 
     /**
@@ -57,5 +55,4 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     {
         return resource_path('views/vendor/laravelperfectmoney');
     }
-
 }
