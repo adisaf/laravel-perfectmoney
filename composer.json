@@ -1,5 +1,6 @@
 {
   "name": "adisaf/laravel-perfectmoney",
+  "version": "0.1.0",
   "description": "PHP PerfectMoney integration for Laravel",
   "keywords": [
     "laravel",
