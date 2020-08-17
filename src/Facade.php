@@ -1,10 +1,9 @@
 <?php
 
-namespace Adisa\PerfectMoney;
-
+namespace Adisaf\PerfectMoney;
 
 /**
- * @see \Adisa\PerfectMoney\PerfectMoney
+ * @see \Adisaf\PerfectMoney\PerfectMoney
  */
 class Facade extends \Illuminate\Support\Facades\Facade
 {

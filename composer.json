@@ -1,5 +1,5 @@
 {
-  "name": "adisa/laravel-perfectmoney",
+  "name": "adisaf/laravel-perfectmoney",
   "description": "PHP PerfectMoney integration for Laravel",
   "keywords": [
     "laravel",
@@ -34,7 +34,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Adisa\\PerfectMoney\\Tests\\": "tests"
+      "Adisaf\\PerfectMoney\\Tests\\": "tests"
     }
   },
   "minimum-stability": "dev",
@@ -45,10 +45,10 @@
     },
     "laravel": {
       "providers": [
-        "Adisa\\PerfectMoney\\ServiceProvider"
+        "Adisaf\\PerfectMoney\\ServiceProvider"
       ],
       "aliases": {
-        "Debugbar": "Adisa\\PerfectMoney\\Facade"
+        "Debugbar": "Adisaf\\PerfectMoney\\Facade"
       }
     }
   },

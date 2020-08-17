@@ -28,8 +28,8 @@ return [
     |--------------------------------------------------------------------------
     |
     | The merchant’s Perfect Money® account to which the payment is to be made.
-	|
-	| Example: "U123456"
+    |
+    | Example: "U123456"
     |
     */
 
@@ -42,9 +42,9 @@ return [
     |--------------------------------------------------------------------------
     |
     | The name the merchant wishes to have displayed as the Payee on the
-	| Perfect Money® payment form.
-	|
-	| Example: "My company, Inc"
+    | Perfect Money® payment form.
+    |
+    | Example: "My company, Inc"
     |
     */
 
@@ -57,9 +57,9 @@ return [
     |--------------------------------------------------------------------------
     |
     | Specifies the units in which payment will be made.
-	| Currency must correspond to selected account type (at Marchant Account).
-	|
-	| Supported: "USD", "EUR", "OAU"
+    | Currency must correspond to selected account type (at Marchant Account).
+    |
+    | Supported: "USD", "EUR", "OAU"
     |
     */
 
@@ -84,10 +84,10 @@ return [
     |--------------------------------------------------------------------------
     |
     | The URL to which a form is submitted or to which a hypertext link
-	| is taken by the buyer’s browser upon successful Perfect Money® payment
-	| to the merchant. This is the buyer’s normal return path into
-	| the merchant’s shopping cart system. This URL can specify a secure
-	| protocol such as https.
+    | is taken by the buyer’s browser upon successful Perfect Money® payment
+    | to the merchant. This is the buyer’s normal return path into
+    | the merchant’s shopping cart system. This URL can specify a secure
+    | protocol such as https.
     |
     */
 
@@ -99,8 +99,8 @@ return [
     |--------------------------------------------------------------------------
     |
     | This field controls how the value for the PAYMENT_URL field is used.
-	|
-	| Supported:  null, "POST", "GET", "LINK"
+    |
+    | Supported:  null, "POST", "GET", "LINK"
     |
     */
 
@@ -113,12 +113,12 @@ return [
     |--------------------------------------------------------------------------
     |
     | The URL to which a form is submitted or to which a hypertext link is taken
-	| by the buyer’s browser upon an unsuccessful or cancelled Perfect Money®
-	| payment to the merchant.
-	|
-	| Note: this URL can be the same as that provided for PAYMENT_URL,
-	| since status is provided on the form in hidden text fields to distinguish
-	| between the two payment outcomes.
+    | by the buyer’s browser upon an unsuccessful or cancelled Perfect Money®
+    | payment to the merchant.
+    |
+    | Note: this URL can be the same as that provided for PAYMENT_URL,
+    | since status is provided on the form in hidden text fields to distinguish
+    | between the two payment outcomes.
     |
     */
 
@@ -130,8 +130,8 @@ return [
     |--------------------------------------------------------------------------
     |
     | This field controls how the value for the NOPAYMENT_URL field is used
-	|
-	| Supported:  null, "POST", "GET", "LINK"
+    |
+    | Supported:  null, "POST", "GET", "LINK"
     |
     */
 
@@ -144,10 +144,10 @@ return [
     |--------------------------------------------------------------------------
     |
     | Marchant Status URL where will be sent the payment details
-	| If status url not needed then set value as null.
-	|
-	| Legal URL types are “mailto:”, “http://”, and “https://”.
-	| Non-standard port numbers are not supported.
+    | If status url not needed then set value as null.
+    |
+    | Legal URL types are “mailto:”, “http://”, and “https://”.
+    | Non-standard port numbers are not supported.
     |
     */
 
@@ -159,7 +159,7 @@ return [
     |--------------------------------------------------------------------------
     |
     | Data for pre-entered MEMO input field
-	| If description not required, left it null.
+    | If description not required, left it null.
     |
     */
     'suggested_memo' => env('PM_SUGGESTED_MEMO', null),

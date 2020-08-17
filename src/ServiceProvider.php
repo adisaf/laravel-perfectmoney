@@ -1,6 +1,6 @@
 <?php
 
-namespace Adisa\PerfectMoney;
+namespace Adisaf\PerfectMoney;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Adisa\PerfectMoney;
+namespace Adisaf\PerfectMoney;
 
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -80,8 +80,6 @@ class PerfectMoney
         $data['status'] = 'success';
 
         return $data;
-
-
     }
 
     /**
@@ -123,7 +121,6 @@ class PerfectMoney
         $data['status'] = 'success';
 
         return $data;
-
     }
 
     /**
@@ -135,7 +132,6 @@ class PerfectMoney
      */
     public static function render($data = [], $view = 'perfectmoney')
     {
-
         $view_data = [
             'PAYEE_ACCOUNT' => (isset($data['PAYEE_ACCOUNT']) ? $data['PAYEE_ACCOUNT'] : config('perfectmoney.marchant_id')),
             'PAYEE_NAME' => (isset($data['PAYEE_NAME']) ? $data['PAYEE_NAME'] : config('perfectmoney.marchant_name')),
@@ -168,7 +164,6 @@ class PerfectMoney
         $view_data['MEMO'] = null;
         if (config('perfectmoney.suggested_memo') || isset($data['SUGGESTED_MEMO'])) {
             $view_data['MEMO'] = (isset($data['SUGGESTED_MEMO']) ? $data['SUGGESTED_MEMO'] : config('perfectmoney.suggested_memo'));
-
         }
 
         // Custom view
@@ -197,7 +192,6 @@ class PerfectMoney
      */
     public function getHistory($start_day = null, $start_month = null, $start_year = null, $end_day = null, $end_month = null, $end_year = null, $data = [])
     {
-
         $start_day = ($start_day ? $start_day : Carbon::now()->subYear()->day);
         $start_month = ($start_month ? $start_month : Carbon::now()->subYear()->month);
         $start_year = ($start_year ? $start_year : Carbon::now()->subYear()->year);
@@ -253,7 +247,6 @@ class PerfectMoney
         }
 
         if (substr($url, 0, 63) == 'Time,Type,Batch,Currency,Amount,Fee,Payer Account,Payee Account') {
-
             $lines = explode("\n", $url);
 
             // Getting table names (Time,Type,Batch,Currency,Amount,Fee,Payer Account,Payee Account)
@@ -281,17 +274,14 @@ class PerfectMoney
                 }
 
                 $return_data['history'][] = $history_line;
-
             }
 
             $return_data['status'] = 'success';
 
             return $return_data;
-
         } else {
             return ['status' => 'error', 'message' => $url];
         }
-
     }
 
     public function generateHash(Request $request)
@@ -307,6 +297,4 @@ class PerfectMoney
         $string .= $request->input('TIMESTAMPGMT');
         return strtoupper(md5($string));
     }
-
 }
-
