@@ -1,0 +1,60 @@
+{
+  "name": "adisa/laravel-perfectmoney",
+  "description": "PHP PerfectMoney integration for Laravel",
+  "keywords": [
+    "laravel",
+    "perfectmoney",
+    "perfect",
+    "money"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Fawaz ADISA",
+      "email": "adisa.fawaz@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "illuminate/support": "^5.5|^6|^7",
+    "nesbot/carbon": "^1.0|^2.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^3.5.11|^4.0|^5.0",
+    "phpunit/phpunit": "^6.0|^7.0|^8.5|^9.0",
+    "squizlabs/php_codesniffer": "^3.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Adisa\\PerfectMoney\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Adisa\\PerfectMoney\\Tests\\": "tests"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    },
+    "laravel": {
+      "providers": [
+        "Adisa\\PerfectMoney\\ServiceProvider"
+      ],
+      "aliases": {
+        "Debugbar": "Adisa\\PerfectMoney\\Facade"
+      }
+    }
+  },
+  "scripts": {
+    "check-style": "phpcs -p --standard=PSR12 config/ src/ tests/",
+    "fix-style": "phpcbf -p --standard=PSR12 config/ src/ tests/",
+    "test": "phpunit"
+  }
+}
