@@ -1,6 +1,6 @@
 {
   "name": "adisaf/laravel-perfectmoney",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "PHP PerfectMoney integration for Laravel",
   "keywords": [
     "laravel",
@@ -43,7 +43,7 @@
         "Adisaf\\PerfectMoney\\ServiceProvider"
       ],
       "aliases": {
-        "Debugbar": "Adisaf\\PerfectMoney\\Facade"
+        "PerfectMoney": "Adisaf\\PerfectMoney\\Facade"
       }
     }
   },
