@@ -16,13 +16,13 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         // Config
         $this->publishes([
             __DIR__ . '/../src/config/perfectmoney.php' => config_path('perfectmoney.php'),
-        ]);
+        ], 'perfectmoney-config');
 
         // Views
         $this->loadViewsFrom(__DIR__ . '/../src/views', 'perfectmoney');
         $this->publishes([
             __DIR__ . '/../src/views' => resource_path('views/vendor/perfectmoney'),
-        ]);
+        ], 'perfectmoney-view');
     }
 
     /**
