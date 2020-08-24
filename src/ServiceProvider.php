@@ -14,13 +14,15 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     {
 
         // Config
-        $configPath = __DIR__ . '/../src/config/perfectmoney.php';
-        $this->publishes([$configPath => $this->getConfigPath()], 'config');
+        $this->publishes([
+            __DIR__ . '/../src/config/perfectmoney.php' => config_path('perfectmoney.php'),
+        ]);
 
         // Views
-        $viewPath = __DIR__ . '/../src/views';
-        $this->loadViewsFrom($viewPath, 'laravelperfectmoney');
-        $this->publishes([$viewPath => $this->getResourcesPath()], 'views');
+        $this->loadViewsFrom(__DIR__ . '/../src/views', 'perfectmoney');
+        $this->publishes([
+            __DIR__ . '/../src/views' => resource_path('views/vendor/perfectmoney'),
+        ]);
     }
 
     /**
@@ -30,29 +32,11 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function register()
     {
-        $configPath = __DIR__ . '/../src/config/perfectmoney.php';
-        $this->mergeConfigFrom($configPath, 'perfectmoney');
+        $this->mergeConfigFrom(
+            __DIR__ . '/../src/config/perfectmoney.php',
+            'perfectmoney'
+        );
 
         $this->app->alias(PerfectMoney::class, 'perfectmoney');
-    }
-
-    /**
-     * Get the config path
-     *
-     * @return string
-     */
-    protected function getConfigPath()
-    {
-        return config_path('perfectmoney.php');
-    }
-
-    /**
-     * Get the resources path
-     *
-     * @return string
-     */
-    protected function getResourcesPath()
-    {
-        return resource_path('views/vendor/laravelperfectmoney');
     }
 }
